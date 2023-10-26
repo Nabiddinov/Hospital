@@ -39,7 +39,7 @@ namespace Hospital.Utilities
                 _roleManager.CreateAsync(new IdentityRole(WebSiteRoles.WebSite_Patient)).GetAwaiter().GetResult();
                 _roleManager.CreateAsync(new IdentityRole(WebSiteRoles.WebSite_Doctor)).GetAwaiter().GetResult();
 
-               // _userManager.CreateAsync()
+                // _userManager.CreateAsync()
             }
 
         }

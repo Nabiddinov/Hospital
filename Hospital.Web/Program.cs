@@ -1,6 +1,6 @@
 using Hospital.Repositories;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace Hospital.Web
 {
@@ -12,11 +12,11 @@ namespace Hospital.Web
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddDbContext<ApplicationDBContext>(options => 
+            builder.Services.AddDbContext<ApplicationDBContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DbContext")));
 
-                        builder.Services.AddDefaultIdentity<IdentityUser>()
-                .AddEntityFrameworkStores<ApplicationDBContext>();
+            builder.Services.AddDefaultIdentity<IdentityUser>()
+            .AddEntityFrameworkStores<ApplicationDBContext>();
 
             var app = builder.Build();
 
@@ -32,7 +32,7 @@ namespace Hospital.Web
             app.UseStaticFiles();
 
             app.UseRouting();
-                        app.UseAuthentication();;
+            app.UseAuthentication(); ;
 
             app.UseAuthorization();
 
